@@ -1,4 +1,5 @@
-word_count = 0
+from stats import get_num_words
+
 
 def get_book_text(book):
     with open(book) as f:
@@ -7,9 +8,12 @@ def get_book_text(book):
 def main():
     book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
-    word_count = len(text.split())
-    print(f"found {word_count} total words")
-    #print(text)
+    num_words=get_num_words(text)
+    print(f"Found {num_words} total words")
+
+    
+
+
 
 if __name__ == "__main__":
     main()
