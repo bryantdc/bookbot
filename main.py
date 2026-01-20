@@ -11,12 +11,15 @@ def main():
     text = get_book_text(book_path)
     num_words=get_num_words(text)
     char_output = get_num_char(text)
+    print("============ BOOKBOT ============")
+    print(f"Analyzing book: {book_path}...")
+    print("----------- Word Count -----------")
     print(f"Found {num_words} total words")
-    print(char_output)
-
-    
-
-
+    print("-------- Character Count ---------")
+    #print(char_output)
+    for char, count in sorted(char_output.items()):
+        print(repr(char), count)
+    print("============= END ===============")
 
 if __name__ == "__main__":
     main()
