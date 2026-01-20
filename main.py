@@ -17,8 +17,12 @@ def main():
     print(f"Found {num_words} total words")
     print("-------- Character Count ---------")
     #print(char_output)
-    for char, count in sorted(char_output.items()):
-        print(repr(char), count)
+
+    for char, count in sorted(char_output.items(), key=lambda item: item[1], reverse=True):
+        if char.isalpha() == True:
+            print(repr(char), count)
+        if char.isalpha() == False:
+            continue
     print("============= END ===============")
 
 if __name__ == "__main__":
