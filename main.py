@@ -20,7 +20,7 @@ def main():
 
     for char, count in sorted(char_output.items(), key=lambda item: item[1], reverse=True):
         if char.isalpha() == True:
-            print(repr(char), count)
+            print(f"{str(char)}: {count}")
         if char.isalpha() == False:
             continue
     print("============= END ===============")
